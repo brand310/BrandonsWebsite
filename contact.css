@@ -1,0 +1,46 @@
+body {
+    background-color: #1f2833;
+}
+
+#githubsquare {
+   width: 200px;
+   height: 200px;
+   background-color: aqua;
+   position: relative;
+   border-radius: 10px;
+
+}
+
+#githubsquare::after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+
+#githubcontent {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto' , sans-serif;
+}   
+
+#emailsquare {
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+    position: relative;
+    border-radius: 10px;
+}
+ 
+ #emailsquare::after {
+     content: "";
+     display: block;
+     padding-bottom: 100%;
+}
+ 
+ #emailcontent {
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     font-family: 'Roboto' , sans-serif;
+ }   
