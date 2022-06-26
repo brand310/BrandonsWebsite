@@ -1,22 +1,32 @@
-
 /* -----------Main opening page------------ */
 
 body {
-    background-color: #1f2833;
+    background-color: .1f2833;
+
+
 }
 
-#main-disc {
+html { 
+    background: url("https://lh3.googleusercontent.com/ZCNVdOtKDYluR-VU7aWIB7K_rdCjAQ-SI1-rQKQ2w9eRzAW1pxzeKGWNW95vUzseOiq5lyIP3WkkEXbKBJgUHx_bFCsH_xw66NWpn87kvWiV92Qvuc2Ru3jMj2ddj5m-NtSzi2mZpoXERGDJW5-qJnt-VXTk-PNgBnbvDOTdeql8xxetI7bKIPo4Z3UE0axs1k7phRakTPqWMfKipTFd8dRn_xMFc2CGN5igFfLo4Ali-MOI0vfDVD7CJ1-iRaKif7sFHqUln8YZhNGBJwbe4_d9XpZgDb1rPiBiHVzr0C2n67BEFoZ40c9jDkY998gCRvY9pCQ_r1YxdVTDmjpvfRZhnCer-ETgSOl41bKHdxvVCZCfmHjhPsyBLOGdwuBG6jAtpvIEtyg70lh_3R_oxL0yeyQ1hlhJOx5DlgCPL70ePu0AX385wamPl07FSlvO1Gq8D4KjHS2gGK148_l55GC_Aor1up1f3G_Z0OXqJdleCo2qe89u0LBMd0CIQ5efoBBFCeOpcqDiMAwqYSH3lFNAd4cx13vNL6qNgrudwx61ZpH_1KQOHB7PgwrT5rwYnX8tGuKZp_-llECIxN7OzopZy00oJ_7UFA9GqdNhcJxfU1dA3VNfTiOTLY-RC737U0xo3Qj-3nT_tMXp9FhZnzg7NIUXqEuoah-y2HVRawEE_20yW48i1L9sKElJC3q0eOSa5NNc4crIhtVODBudJJBzGGkmgfz8vzD7ufXk7E1qhZuWJ8GbEmOdW6a0wGjRSKOfv49FKDPbSfu-m8-KneMCMtKb_KCozepIn_JFZz65JJt3tpZyOjkz9VRCTZvSxWTxl3RpsZSY16To5bVFyq6RIglKDdF8HZ3kWJwzKn6DG0Cgsy7jXdtx7HZ-aW3PPcDxWhU7_Q=w1364-h909-no?authuser=0") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    
+}
+
+.main-disc {
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translateX(-50%) translateY(-50%);
     white-space:wrap;
-    padding: 10px;
+   
     
 
 }
 
-#name-intro {
+.name-intro {
     color:#5291B7;
     font-family: 'Press Start 2P';
     font-size: 10px;
@@ -26,14 +36,14 @@ body {
     
 }
 
-#name1 {
+.name1 {
     color:mediumturquoise;
     font-family: 'Roboto', sans-serif;
     font-size: 70px;
 
 }
 
-#name-disc {
+.name-disc {
     color: #37827e;
     font-family: 'Roboto' , sans-serif;
     font-size: 40px;
@@ -47,23 +57,119 @@ p {
 
 }
 
-#backgroundImg {
-    opacity: 50%;
-    background-size: cover;
-}   
 
+/*----------------------------------------------------------------------------*/
+ 
 
-
-
-
-
-
-
-#myBtn {
-    color: aquamarine;
+.nav-container {
+    width: 100%;
     background-color: black;
-    font-family: 'Roboto' , sans-serif;
-    
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.navbar {
+    display: grid;
+    grid-template-columns: 0.2fr auto 1fr;
+    align-items: center;
+    height: 80px;
+    width: 90%;
+    max-width: 1720px;
+    margin: 0 auto;
+}
+
+#navbar-logo {
+    color: #37827e;
+    justify-self: start;
+    margin-left: 20px;
+}
+
+#navbar-logo {
+    cursor: pointer;
+}
+
+.nav-menu {
+display: grid;
+grid-template-columns: repeat(4, auto);
+list-style: none;
+text-align: center;
+justify-self: end;
 }
 
 
+
+.nav-links {
+    color:aliceblue;
+    text-decoration: none;
+}
+
+.nav-links:hover {
+    color:#5291B7;
+    transition: all .5s ease-out;
+}
+
+.nav-links-btn {
+    background-color:steelblue;
+    padding: 6px;
+    border-radius: 4px;
+
+}
+
+.nav-links-btn:hover {
+    background-color: transparent;
+    color: white;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    border: solid 1px cornflowerblue 
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.5s ease-in-out;
+    background:white;
+}
+
+@media screen and (max-width: 769px) {
+    .nav-container {
+        position: relative;
+        grid-template-columns: auto;
+        background:#37827e;
+        margin: 0;
+        position:absolute;
+        top: 80px auto;
+        left: -100%;
+        opacity: 0;
+        transition: all 0.5s ease;
+    }
+
+    #navbar-logo {
+        margin-left: 20px;
+
+    }
+
+    .nav-menu.active {
+        background: #37827e;
+        left:0;
+        opacity: 1;
+        transition: all 0.5s ease;
+    }
+
+    .nav-links {
+        text-align: center;
+        line-height: 60px;
+        width: 100%;
+        display: table;
+    }
+
+    .nav-links:hover { 
+        background-color: red;
+        color: white;
+        transition: all 0.4s ease-out
+    }
+
+    .navbar {
+        width:100%
+    }
+}
